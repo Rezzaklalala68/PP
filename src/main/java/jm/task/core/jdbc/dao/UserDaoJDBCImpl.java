@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserDaoJDBCImpl implements UserDao {
-    UserDao userDao;
     public UserDaoJDBCImpl() {
 
     }
@@ -21,7 +20,7 @@ public class UserDaoJDBCImpl implements UserDao {
                 "age SMALLINT" +
                 ")";
         try(
-            Statement statement = Util.getConnection().createStatement();){
+            Statement statement = Util.getConnection().createStatement()){
                 statement.execute(createTableSQL);
             System.out.println("Users table created");
         }
