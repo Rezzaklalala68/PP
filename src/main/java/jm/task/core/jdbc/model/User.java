@@ -14,13 +14,13 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "user_name", nullable = false)
+    @Column(name = "name", nullable = false)
     private String name;
 
     @Column(name = "last_name", nullable = false)
     private String lastName;
 
-    @Column(name = "user_age", nullable = false)
+    @Column(name = "age", nullable = false)
     private Byte age;
 
     public User() {
